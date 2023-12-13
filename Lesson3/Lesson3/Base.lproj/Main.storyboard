@@ -15,13 +15,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cig-6q-yiV">
+                                <rect key="frame" x="62" y="20" width="252" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="choiceSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="gst-9V-Tc5"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MXP-3B-1GZ">
+                                <rect key="frame" x="60" y="156" width="256" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H0G-Nw-9rO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="QzQ-pW-A6J"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLT-dh-jkp">
+                                <rect key="frame" x="16" y="81" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MXP-3B-1GZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="Exc-KQ-Vbf"/>
+                            <constraint firstItem="cig-6q-yiV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IbC-Qi-l90"/>
+                            <constraint firstItem="MXP-3B-1GZ" firstAttribute="top" secondItem="FLT-dh-jkp" secondAttribute="bottom" constant="54" id="NnY-5y-B2W"/>
+                            <constraint firstItem="FLT-dh-jkp" firstAttribute="top" secondItem="cig-6q-yiV" secondAttribute="bottom" constant="30" id="g18-vq-7Rk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MXP-3B-1GZ" secondAttribute="trailing" constant="61" id="mEV-9L-uCi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cig-6q-yiV" secondAttribute="trailing" constant="61" id="sSp-PW-zpu"/>
+                            <constraint firstItem="cig-6q-yiV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="smA-Yf-twj"/>
+                            <constraint firstItem="FLT-dh-jkp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uLt-jK-rX3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FLT-dh-jkp" secondAttribute="trailing" constant="16" id="uzc-So-szc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="FLT-dh-jkp" id="Gux-tH-DrX"/>
+                        <outlet property="segmentedControl" destination="cig-6q-yiV" id="HWe-c2-dO0"/>
+                        <outlet property="slider" destination="MXP-3B-1GZ" id="VJF-dH-ERZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-27"/>
+            <point key="canvasLocation" x="132" y="-27.436281859070466"/>
         </scene>
     </scenes>
     <resources>
